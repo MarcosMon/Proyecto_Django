@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %} {% load static %} {% block contenido %}
+
+
+<div class="contenedor_peliculas">
+    <h2 class="titulo_contenedor_pelicula">Cartelera semanal</h2>
+    {% for imagen in data %}
+
+    <div class="pelicula">
+        <img src="{% static 'core/img/'%}{{ imagen }}.jpg" alt="{{imagen}}">
+        <a href="# ">Ver horarios</a>
+    </div>
+    {% endfor %}
+
+</div>
+<br>
+<div class="contenedor_peliculas ">
+    <h2 class="titulo_contenedor_pelicula ">PREVENTA / PRÓXIMOS ESTRENOS</h2>
+    {% for imagen in data %}
+
+    <div class="pelicula">
+        <img src="{% static 'core/img/'%}{{ imagen }}.jpg" alt="{{imagen}}">
+        <a href="# ">Ver horarios</a>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

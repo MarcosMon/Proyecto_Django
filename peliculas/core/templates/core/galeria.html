@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %} {% load static %}
+
+
+{% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+{% endblock %}
+
+{% block javascript %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script> 
+
+{% endblock %}
+ {% block contenido %}
+
+<div class="contenedor_formulario">
+
+    <div>
+
+        <div class="galeria">
+
+            {% for imagen in data %}
+
+                <a data-fancybox="gallery" href="{% static 'core/img/'%}{{ imagen }}.jpg">
+                <img src="{% static 'core/img/'%}{{ imagen }}.jpg" alt="{{imagen}}">
+                </a>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
